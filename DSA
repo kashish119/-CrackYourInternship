@@ -23,4 +23,46 @@ Leetcode :-
     }
 };
 
-2)
+2) Medium -- 287. Find the Duplicate Number
+
+    class Solution 
+    {
+      public:
+      int findDuplicate(vector<int>& nums) 
+      {
+         int count = 0;
+		     sort(nums.begin(),nums.end());
+          for(int i = 0; i < nums.size() - 1; i++)
+          {
+              if(nums[i] == nums[i+1])
+              {
+                count = nums[i];
+                break;
+             }
+        }
+        return count;
+    }
+    
+  };
+
+    AND
+    
+  Easy-- 217. Contains Duplicate
+    
+    class Solution  
+    {
+     public:
+      bool containsDuplicate(vector<int>& nums) 
+      {
+        bool flag=0;
+          sort(nums.begin(),nums.end());
+          for(int i=1;i<nums.size();i++)  
+          {
+                if(nums[i]==nums[i-1])
+                    flag=1;
+          }
+        return flag;
+ 
+      }
+    
+  };
