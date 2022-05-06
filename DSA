@@ -1,5 +1,7 @@
 
 Leetcode :- 
+
+DAY-1   03|05|2022
 1) Medium -- 75. Sort Colors
 
   class Solution {
@@ -22,6 +24,10 @@ Leetcode :-
 
     }
 };
+
+DAY-2--> NOT DONE ANYTHING
+
+DAY-3
 
 2) Medium -- 287. Find the Duplicate Number
 
@@ -66,3 +72,51 @@ Leetcode :-
       }
     
   };
+  
+ Easy-- 217. Contains Duplicate 
+ 
+  class Solution 
+  {
+   public:
+    bool containsDuplicate(vector<int>& nums) 
+    {
+       bool flag=0;
+        sort(nums.begin(),nums.end());
+    
+
+        for(int i=1;i<nums.size();i++){
+                if(nums[i]==nums[i-1])
+                    flag=1;
+            }
+        return flag;
+ 
+    }
+    
+};
+
+
+Easy -- 53. Maximum Subarray
+
+class Solution 
+{
+  public:
+    int maxSubArray(vector<int>& nums)
+    {
+        int sum=0;
+        int maximum=INT_MIN;
+        for(auto it:nums)
+        {
+            sum+=it;
+            maximum=max(sum,maximum);
+            if(sum<0)
+                sum=0;
+        }
+        return maximum;
+    }
+};
+
+DAY-4
+
+Easy-- 1. Two Sum
+
+
